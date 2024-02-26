@@ -1,6 +1,6 @@
 # TREY comic universe
 
-TODO link here
+<https://lacop.github.io/TREY/>
 
 I wanted to read all the TREY comics in a more convenient way, so I made this.
 
