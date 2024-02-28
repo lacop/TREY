@@ -28,6 +28,14 @@ output = '''
         <title>TREY Comic Book</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
+            h1 {
+                margin-bottom: 0;
+                padding-left: 1rem;
+                padding-bottom: 1rem;
+                font-size: 2rem;
+                border-bottom: 4px dashed black;
+            }
+
             main {
                 height: 100vh;
                 width: 100vw;
@@ -37,55 +45,45 @@ output = '''
                 overflow-y: scroll;
                 scroll-snap-type: y mandatory;
                 scroll-padding: 1rem;
-            }
 
-            .comic {
-                scroll-snap-align: start;
-                width: 100%;
-                min-height: 85vh;
-            }
+                .comic {
+                    scroll-snap-align: start;
+                    width: 100%;
+                    min-height: 85vh;
 
-            .comic:first-child {
-                margin-top: 4rem;
-            }
-            
-            .images {
-                display: flex;
-                flex-direction: row;
-                gap: 1rem;
-                padding-top: 1rem;
-                overflow-x: scroll;
-                /*scroll-snap-type: x proximity;
-                scroll-padding: 0 3vw;*/
-            }
+                    .topbar {
+                        min-height: 5vh;
+                        padding-left: 10vw;
+                        font-size: 1rem;
 
-            .topbar {
-                min-height: 5vh;
-                padding-left: 10vw;
-                font-size: 1rem;
-            }
+                        h2 {
+                            font-size: 1.5rem;
+                            margin-bottom: 0.5rem;
+                        }
+                    }
 
-            h1 {
-                margin-bottom: 0;
-                padding-left: 1rem;
-                padding-bottom: 1rem;
-                font-size: 2rem;
-                border-bottom: 4px dashed black;
-            }
+                    .images {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 1rem;
+                        padding-top: 1rem;
+                        overflow-x: scroll;
 
-            h2 {
-                font-size: 1.5rem;
-                margin-bottom: 0.5rem;
-            }
+                        img {
+                            scroll-snap-align: start;
+                            min-width: 70vw;
+                            max-height: 80vh;
+                        }
 
-            img {
-                scroll-snap-align: start;
-                min-width: 70vw;
-                max-height: 80vh;
-            }
+                        img:first-child {
+                            padding-left: 10vw;
+                        }
+                    }
+                }
 
-            img:first-child {
-                padding-left: 10vw;
+                .comic:first-child {
+                    margin-top: 4rem;
+                }
             }
         </style>
     </head>
