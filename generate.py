@@ -25,7 +25,7 @@ output = '''
 <!DOCTYPE html>
 <html>
     <head>
-        <title>TREY</title>
+        <title>TREY Comic Book</title>
         <style>
             main {
                 height: 100vh;
@@ -61,8 +61,11 @@ output = '''
             }
 
             h1 {
+                margin-bottom: 0;
                 padding-left: 3rem;
+                padding-bottom: 1.5rem;
                 font-size: 4rem;
+                border-bottom: 4px dashed black;
             }
 
             h2 {
@@ -82,6 +85,7 @@ output = '''
         </style>
     </head>
     <body>
+        <h1>TREY Comic Book</h1>
         <main>
 '''
 
