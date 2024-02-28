@@ -32,10 +32,10 @@ output = '''
                 width: 100vw;
                 display: flex;
                 flex-direction: column;
-                gap: 1em;
+                gap: 1rem;
                 overflow-y: scroll;
                 scroll-snap-type: y mandatory;
-                scroll-padding: 1em;
+                scroll-padding: 1rem;
             }
 
             .comic {
@@ -43,24 +43,31 @@ output = '''
                 width: 100%;
                 min-height: 85vh;
             }
-
-            .comic:first-child {
-                padding-top: 1em;
-            }
             
             .images {
                 display: flex;
                 flex-direction: row;
-                gap: 1em;
+                gap: 1rem;
+                padding-top: 3rem;
                 overflow-x: scroll;
                 /*scroll-snap-type: x proximity;
                 scroll-padding: 0 3vw;*/
-                padding: auto;
             }
 
             .topbar {
                 min-height: 5vh;
-                font-size: 150%;    
+                padding-left: 10vw;
+                font-size: 3rem;
+            }
+
+            h1 {
+                padding-left: 3rem;
+                font-size: 4rem;
+            }
+
+            h2 {
+                font-size: 4rem;
+                margin-bottom: 1rem;
             }
 
             img {
