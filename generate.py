@@ -26,6 +26,7 @@ output = '''
 <html>
     <head>
         <title>TREY Comic Book</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
             main {
                 height: 100vh;
@@ -43,12 +44,16 @@ output = '''
                 width: 100%;
                 min-height: 85vh;
             }
+
+            .comic:first-child {
+                margin-top: 4rem;
+            }
             
             .images {
                 display: flex;
                 flex-direction: row;
                 gap: 1rem;
-                padding-top: 3rem;
+                padding-top: 1rem;
                 overflow-x: scroll;
                 /*scroll-snap-type: x proximity;
                 scroll-padding: 0 3vw;*/
@@ -57,20 +62,20 @@ output = '''
             .topbar {
                 min-height: 5vh;
                 padding-left: 10vw;
-                font-size: 3rem;
+                font-size: 1rem;
             }
 
             h1 {
                 margin-bottom: 0;
-                padding-left: 3rem;
-                padding-bottom: 1.5rem;
-                font-size: 4rem;
+                padding-left: 1rem;
+                padding-bottom: 1rem;
+                font-size: 2rem;
                 border-bottom: 4px dashed black;
             }
 
             h2 {
-                font-size: 4rem;
-                margin-bottom: 1rem;
+                font-size: 1.5rem;
+                margin-bottom: 0.5rem;
             }
 
             img {
