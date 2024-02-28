@@ -171,12 +171,12 @@ output = '''
                         color: mediumblue;
                     }
 
-                    a:active {
-                        color: firebrick;
-                    }
-
                     a:visited {
                         color: rebeccapurple;
+                    }
+
+                    a:active {
+                        color: firebrick;
                     }
                 }
             }
