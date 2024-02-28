@@ -157,6 +157,29 @@ output = '''
                     }
                 }
             }
+
+            @media (prefers-color-scheme: dark) {
+                html {
+                    color: whitesmoke;
+                    background-color: #141414;
+
+                    h1 {
+                        border-bottom: 4px dashed whitesmoke;
+                    }
+
+                    a {
+                        color: mediumblue;
+                    }
+
+                    a:active {
+                        color: firebrick;
+                    }
+
+                    a:visited {
+                        color: rebeccapurple;
+                    }
+                }
+            }
         </style>
     </head>
     <body>
