@@ -85,6 +85,78 @@ output = '''
                     margin-top: 4rem;
                 }
             }
+
+            /* MD */
+            @media (768px <= width) {
+                main {
+                    .comic {
+                        min-height: unset;
+
+                        .topbar {
+                            min-height: unset;
+                            padding-left: 4rem;
+                            font-size: 1.5rem;
+
+                            h2 {
+                                font-size: 2rem;
+                            }
+                        }
+
+                        .images {
+                            img {
+                                min-width: unset;
+                                max-height: 30rem;
+                            }
+
+                            img:first-child {
+                                padding-left: 4rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            /* LG */
+            @media (992px <= width) {
+                h1 {
+                    padding-left: 4rem;
+                }
+
+                main {
+                    .comic {
+                        .topbar {
+                            padding-left: 8rem;
+                        }
+
+                        .images {
+                            img:first-child {
+                                padding-left: 8rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            /* XL */
+            @media (1200px <= width) {
+                h1 {
+                    padding-left: 8rem;
+                }
+
+                main {
+                    .comic {
+                        .topbar {
+                            padding-left: 16rem;
+                        }
+
+                        .images {
+                            img:first-child {
+                                padding-left: 16rem;
+                            }
+                        }
+                    }
+                }
+            }
         </style>
     </head>
     <body>
