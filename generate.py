@@ -33,7 +33,7 @@ output = '''
                 padding-left: 1rem;
                 padding-bottom: 1rem;
                 font-size: 2rem;
-                border-bottom: 4px dashed black;
+                border-bottom: 0.25rem dashed black;
             }
 
             main {
@@ -164,7 +164,7 @@ output = '''
                     background-color: #141414;
 
                     h1 {
-                        border-bottom: 4px dashed whitesmoke;
+                        border-color: whitesmoke;
                     }
 
                     a {
