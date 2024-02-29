@@ -33,7 +33,7 @@ output = '''
                 padding-left: 1rem;
                 padding-bottom: 1rem;
                 font-size: 2rem;
-                border-bottom: 4px dashed black;
+                border-bottom: 0.25rem dashed black;
             }
 
             main {
@@ -154,6 +154,29 @@ output = '''
                                 padding-left: 16rem;
                             }
                         }
+                    }
+                }
+            }
+
+            @media (prefers-color-scheme: dark) {
+                html {
+                    color: whitesmoke;
+                    background-color: #141414;
+
+                    h1 {
+                        border-color: whitesmoke;
+                    }
+
+                    a {
+                        color: mediumblue;
+                    }
+
+                    a:visited {
+                        color: rebeccapurple;
+                    }
+
+                    a:active {
+                        color: firebrick;
                     }
                 }
             }
