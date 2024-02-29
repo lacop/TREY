@@ -28,12 +28,19 @@ output = '''
         <title>TREY Comic Book</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
-            h1 {
-                margin-bottom: 0;
+            header {
+                height: 4.5rem;
+                width: 100%;
+                position: fixed;
+                top: 0;
                 padding-left: 1rem;
-                padding-bottom: 1rem;
-                font-size: 2rem;
+                background-color: white;
                 border-bottom: 0.25rem dashed black;
+
+                h1 {
+                    margin-bottom: 0;
+                    font-size: 2rem;
+                }
             }
 
             main {
@@ -48,6 +55,7 @@ output = '''
 
                 .comic {
                     scroll-snap-align: start;
+                    scroll-margin-top: 4.5rem;
                     width: 100%;
                     min-height: 85vh;
 
@@ -86,6 +94,14 @@ output = '''
                 }
             }
 
+            footer {
+                position: sticky;
+                bottom: 0;
+                padding: 1rem;
+                background-color: white;
+                border-top: 0.25rem dashed black;
+            }
+
             /* MD */
             @media (768px <= width) {
                 main {
@@ -118,7 +134,8 @@ output = '''
 
             /* LG */
             @media (992px <= width) {
-                h1 {
+                header,
+                footer {
                     padding-left: 4rem;
                 }
 
@@ -139,7 +156,8 @@ output = '''
 
             /* XL */
             @media (1200px <= width) {
-                h1 {
+                header,
+                footer {
                     padding-left: 8rem;
                 }
 
@@ -163,7 +181,9 @@ output = '''
                     color: whitesmoke;
                     background-color: #141414;
 
-                    h1 {
+                    header,
+                    footer {
+                        background-color: #141414;
                         border-color: whitesmoke;
                     }
 
@@ -183,7 +203,9 @@ output = '''
         </style>
     </head>
     <body>
-        <h1>TREY Comic Book</h1>
+        <header>
+            <h1>TREY Comic Book</h1>
+        </header>
         <main>
 '''
 
@@ -195,14 +217,14 @@ for i, comic in enumerate(comics):
         time_after = f''', {time_ago(comic['created_utc'])} after TREY'''
 
     output += f'''
-            <div class="comic">
+            <div class="comic" id="#{i+1}">
                 <div class="topbar">
                     <h2>
                         <a href="https://old.reddit.com/{comic['id']}">{title}</a>
                         by {comic['author']}
                     </h2>
                     #{i+1} / {len(comics)}{time_after}.<br />
-                    {humanize.intcomma(comic['score'])} points, {len(comic['frames'])} panels.
+                    {humanize.intcomma(comic['score'])} points | {len(comic['frames'])} panels | <a href="\##{i+1}">perm</a>
                 </div>
                 <div class="images">
     '''
@@ -218,6 +240,20 @@ for i, comic in enumerate(comics):
 
 output += '''
         </main>
+        <footer>
+'''
+
+for i, _ in enumerate(comics):
+    increased_i = i + 1
+    formatted_i = f"{increased_i:02}"
+
+    output += f'''
+            [<a href="\##{increased_i}">#{formatted_i}</a>]
+    '''
+
+
+output += '''
+        </footer>
     </body>
 </html>
 '''
