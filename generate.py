@@ -198,7 +198,7 @@ for i, comic in enumerate(comics):
             <div class="comic">
                 <div class="topbar">
                     <h2>
-                        <a href="{comic['url']}">{title}</a>
+                        <a href="https://old.reddit.com/{comic['id']}">{title}</a>
                         by {comic['author']}
                     </h2>
                     #{i+1} / {len(comics)}{time_after}.<br />
