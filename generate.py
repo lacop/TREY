@@ -217,7 +217,7 @@ for i, comic in enumerate(comics):
         time_after = f''', {time_ago(comic['created_utc'])} after TREY'''
 
     output += f'''
-            <div class="comic" id="#{i+1}">
+            <div class="comic" id="{i+1}">
                 <div class="topbar">
                     <h2>
                         <a href="https://old.reddit.com/{comic['id']}">{title}</a>
@@ -248,7 +248,7 @@ for i, _ in enumerate(comics):
     formatted_i = f"{increased_i:02}"
 
     output += f'''
-            [<a href="\##{increased_i}">#{formatted_i}</a>]
+            [<a href="#{increased_i}">#{formatted_i}</a>]
     '''
 
 
