@@ -224,7 +224,7 @@ for i, comic in enumerate(comics):
                         by {comic['author']}
                     </h2>
                     #{i+1} / {len(comics)}{time_after}.<br />
-                    {humanize.intcomma(comic['score'])} points | {len(comic['frames'])} panels | <a href="\##{i+1}">perm</a>
+                    {humanize.intcomma(comic['score'])} points | {len(comic['frames'])} panels | <a href="#{i+1}">perm</a>
                 </div>
                 <div class="images">
     '''
